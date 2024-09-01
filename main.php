@@ -139,7 +139,7 @@
         <div class="footer-content">
             <!-- 푸터에 대한 정보 -->
             <p>저작권 © Hyun Su Kim</p>
-            <p>대표자 이메일: s2005i@naver.com</p>
+            <p>대표자 이메일: admin@naver.com</p>
             <p>대표자 전화번호: 000-0000-0000</p>
             <p>문의전화: 000-000-0000</p>
             <p>주소: 서울시 강남구 예시로 123</p>

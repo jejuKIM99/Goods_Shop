@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- 생성 시간: 24-09-02 02:23
+-- 생성 시간: 24-09-02 02:43
 -- 서버 버전: 10.4.28-MariaDB
 -- PHP 버전: 8.2.4
 
@@ -251,7 +251,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `email`, `nickname`, `password_hash`, `created_at`, `updated_at`, `profile_image`) VALUES
-(5, 's2005i@naver.com', 'KIM', '$2y$10$uzpED.vwc203O4sNPZmUauO.zr.VBxg2wsEk0klTkZiDXdqwihByC', '2024-08-20 14:54:11', '2024-09-01 17:10:00', 'uploads/new album_5.jpg'),
+(5, 'admin@naver.com', 'KIM', '$2y$10$uzpED.vwc203O4sNPZmUauO.zr.VBxg2wsEk0klTkZiDXdqwihByC', '2024-08-20 14:54:11', '2024-09-01 17:43:44', 'uploads/new album_5.jpg'),
 (11, '12345@gmail.com', 'dump1', '$2y$10$GKEK5qps/evcyyaSQ72aQOdpu1joerfwXnacQnwoytU3HarrqsMwm', '2024-08-20 16:09:39', '2024-08-23 15:06:29', 'uploads/new album_5.jpg');
 
 --
