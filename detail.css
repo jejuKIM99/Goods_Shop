@@ -1,0 +1,130 @@
+/* 네비게이션 바와 본문 영역 사이의 파란색 선 */
+.nav-separator {
+    height: 3px;
+    background-color: blue;
+    min-width: 100%;
+    z-index: 10;
+}
+
+/* 상세 페이지 스타일 */
+.detail-container {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row; /* 가로로 정렬 */
+    gap: 10rem; /* 이미지와 정보 사이 간격 */
+    box-sizing: border-box;
+    margin-top: 6rem; /* nav와의 간격 */
+}
+
+.detail-image img {
+    margin-top: 1.5rem;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.detail-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 수정된 내용: 이미지 옆에 정보 배치 */
+    gap: 1rem; /* 정보 간 간격 추가 */
+}
+
+.detail-info h1 {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.detail-info p {
+    font-family: "Kode Mono", monospace;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.detail-info p strong {
+    font-weight: 700;
+}
+
+.detail-separator {
+    border-radius: 50px;
+    width: 1400px;  /* 너비를 1400px로 설정 */
+    margin: 2rem auto; /* 중앙 배치: 상하 2rem, 좌우 auto */
+    border: none;
+    height: 5px;
+    background-color: blue; /* 선 색상 */
+}
+
+.additional-info {
+    width: 1400px;  /* 너비를 1400px로 설정 */
+    margin: 0 auto; /* 중앙 배치 */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start; /* 내부 요소를 왼쪽 정렬 */
+}
+
+.additional-info p {
+    width: 100%; /* 너비를 부모 요소에 맞추어 늘림 */
+    margin: 0;   /* 기본 마진 제거 */
+    font-size: 1.2rem;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.cart-button, .buy-button {
+    padding: 0.5rem 1rem;
+    font-family: "Silkscreen", sans-serif;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-button:hover, .buy-button:hover {
+    background-color: #0056b3;
+}
+
+/* Back Button */
+.back-button {
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+
+.back-button button {
+    padding: 0.5rem 2rem;
+    font-family: "Silkscreen", sans-serif;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button button:hover {
+    background-color: #0056b3;
+}
+
+.youtube-video {
+    width: 800px;
+    height: 450px;
+    border-radius: 5px;
+    overflow: hidden;
+    align-self: center; /* YouTube 영상만 중앙 정렬 */
+    margin-bottom: 1.5rem;
+}

@@ -1,0 +1,187 @@
+/* 커뮤니티 페이지 내용 영역 스타일 */
+.nav-separator {
+    height: 3px;
+    background-color: blue;
+    min-width: 100%;
+    z-index: 10;
+}
+
+/* 링크 스타일 */
+a {
+    color: black; /* 글자 색상을 검은색으로 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+a:hover {
+    text-decoration: none; /* 마우스 오버 시에도 밑줄 제거 */
+}
+
+/* 전체 내용 영역의 스타일 */
+.content-container {
+    width: 80%; /* 너비를 80%로 설정 */
+    max-width: 1400px; /* 최대 너비를 1400px로 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
+    padding: 20px; /* 내부 여백 */
+}
+
+/* 제목 스타일 */
+.content-container h1 {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 테이블 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse; /* 테두리 합치기 */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid blue; /* 하단 테두리 */
+}
+
+/* 헤더 스타일 */
+thead {
+    background-color: blue; /* 헤더 배경 색상 */
+}
+
+th {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+td {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #000000;
+}
+
+/* 행 스타일 */
+tbody tr:nth-child(even) {
+    background-color: #ffffff; /* 짝수 행 배경 색상 */
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 0, 255, 0.041); /* 마우스 오버 시 배경 색상 */
+}
+
+/* 제목, 작성자, 작성일자, 조회수 영역 스타일 */
+th:nth-child(2),
+td:nth-child(2) {
+    flex: 3; /* 제목 영역을 가장 크게 설정 */
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 120px;
+    flex: 2; /* 작성자 영역을 중간 크기로 설정 */
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 160px;
+    flex: 2; /* 작성일자 영역을 중간 크기로 설정 */
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+    flex: 1; /* 조회수 영역을 가장 작게 설정 */
+    text-align: right;
+}
+
+/* 페이지네이션 스타일 */
+.pagination {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.pagination a {
+    font-family: "Silkscreen", sans-serif;
+    display: inline-block;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.pagination a:hover {
+    background-color: #0056b3;
+}
+
+.pagination .active {
+    background-color: #0056b3;
+    pointer-events: none;
+}
+
+/* 검색 폼 스타일 */
+.search-container {
+    margin-bottom: 1rem;
+}
+
+.search-container form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-container input[type="text"] {
+    width: 200px;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 700;
+    padding: 0.5rem;
+    border: 2px solid blue;
+    border-radius: 30px;
+    font-size: 1rem;
+}
+
+.search-container select {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 700;
+    padding: 0.5rem;
+    border: 2px solid blue;
+    border-radius: 30px;
+    font-size: 1rem;
+}
+
+.search-container button {
+    font-family: "Silkscreen", sans-serif;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 30px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Go Back Button style */
+.search-container .back_button {
+    display: inline-block;
+    font-family: "Silkscreen", sans-serif;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 30px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.search-container .back_button:hover {
+    background-color: #0056b3;
+}

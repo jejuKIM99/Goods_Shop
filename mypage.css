@@ -1,0 +1,129 @@
+/* 네비게이션 바와 본문 영역 사이의 파란색 선 */
+.nav-separator {
+    height: 3px;
+    background-color: blue;
+    min-width: 100%;
+    z-index: 10;
+}
+
+/* 전체 프로필 컨테이너 스타일링 */
+.profile-container {
+    width: 1200px;
+    margin: 0 auto; /* 중앙 정렬 */
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+/* 프로필 이미지 스타일링 */
+.profile {
+    text-align: center;
+    margin-bottom: 2rem; /* 내용 영역과의 간격 조절 */
+}
+
+.profile-img {
+    box-shadow: 3px 3px 44px -3px #007bffb8;
+    border: 2px solid blue;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* 원형으로 만들기 */
+    object-fit: cover;
+    margin-bottom: 1rem; /* 이미지와 내용 사이 간격 */
+}
+
+/* 프로필 세부 사항 스타일링 */
+.profile-details {
+    margin-bottom: 2rem; /* 비밀번호 변경 버튼과 구매 목록 사이의 간격 */
+}
+
+.profile-details p {
+    font-family: "Kode Mono", monospace;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem; /* 이메일과 버튼 사이의 간격 */
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: "Silkscreen", sans-serif;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* 구매 목록 섹션 스타일링 */
+.purchase-history {
+    padding-top: 2rem; /* 상단 여백 */
+}
+
+.purchase-history h2 {
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.purchase-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.purchase-history li {
+    font-family: "Kode Mono", monospace;
+    font-size: 1.2rem;
+    color: #555;
+    border-bottom: 1px solid #ddd; /* 각 항목 사이에 구분선 추가 */
+    padding: 0.5rem 0;
+}
+
+/* 구분선 스타일 */
+.divider {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 2rem 0; /* 상하 여백 */
+}
+
+/* 이미지 업로드 모달 */
+.upload-modal {
+    display: none; /* 기본적으로 숨김 */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.upload-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.upload-modal-close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.upload-modal-close-btn:hover,
+.upload-modal-close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

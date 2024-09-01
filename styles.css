@@ -1,0 +1,662 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Poiret+One&family=Silkscreen:wght@400;700&display=swap');
+
+/* common */
+
+/* 부드러운 스크롤 */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('bg/bg_white.png') center center fixed;
+}
+
+h1 {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: "Kode Mono", monospace;
+    font-weight: 400;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5rem;
+    background-color: #ffffff;
+    z-index: 2000;
+    transition: box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    margin-top: 5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+}
+
+.nav-left {
+    flex: 1;
+}
+
+.nav-left .logo {
+    height: 100%;
+    object-fit: contain;
+}
+
+.nav-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.nav-center a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.nav-center a:hover {
+    color: blue;
+}
+
+.nav-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: flex-end;
+}
+
+.nav-right .cart-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transition: filter 0.1s ease;
+}
+
+.nav-right .cart-icon:hover {
+    filter: invert(9%) sepia(100%) saturate(7473%) hue-rotate(247deg) brightness(82%) contrast(143%);
+}
+
+.nav-right .login-button {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.nav-right .login-button:hover {
+    color: blue;
+}
+
+/* container */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.blue-background {
+    background: url('bg/bg_logo.png');
+    filter: blur(2px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: blue;
+    z-index: 1;
+    transition: width 2s ease;
+}
+
+.main-visual {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: url('bg/main_visual.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: 2;
+    transition: width 2s ease;
+}
+
+.text-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(6%, -50%);
+    color: white;
+    opacity: 0;
+    z-index: 3;
+    transition: opacity 2s ease 2s, left 2s ease;
+}
+
+.text-content h1 {
+    font-size: 4rem;
+}
+
+.text-content p {
+    font-size: 1.5rem;
+}
+
+.shop-button {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.shop-button a {
+    width: 300px;
+    height: 42px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    font-family: "Silkscreen", sans-serif;
+    font-size: 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.shop-button a:hover {
+    background-color: #0056b3;
+}
+
+/* 슬라이드 컨테이너 */
+.banner-slider {
+    position: relative;
+    width: 1400px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* 슬라이더 */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 화살표 버튼 */
+.arrow {
+    position: absolute;
+    bottom: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.arrow img {
+    width: 40px;
+    height: 40px;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}
+
+/* 신상품 영역 */
+.new-arrivals {
+    margin: 2rem auto;
+    width: 1400px;
+    padding: 1rem;
+}
+
+.new-arrivals-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.new-arrivals-header h2 {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: black;
+}
+
+.more-link {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.more-link:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.new-arrivals-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    width: calc(20% - 1rem);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 인기 앨범 소개 영역 */
+.best-albums {
+    margin: 2rem auto;
+    width: 1400px;
+    padding: 1rem;
+}
+
+.best-albums-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.best-albums-header h2 {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: black;
+}
+
+.best-albums-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.album-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 1rem;
+}
+
+.album-image {
+    width: 500px;
+    height: 500px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.album-image-inner {
+    width: 100%;
+    height: 100%;
+    transform: rotateX(15deg) rotateY(15deg);
+    transform-style: preserve-3d;
+    transition: transform 1s ease, filter 1s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.album-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.album-image:active .album-image-inner {
+    transform: rotateX(360deg);
+    filter: brightness(1.2);
+}
+
+.album-details {
+    max-width: 600px;
+    padding: 1rem;
+}
+
+.album-details h3 {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: black;
+}
+
+.album-details .price {
+    font-family: "Kode Mono", monospace;
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin: 0.5rem 0;
+}
+
+.album-details .tracklist {
+    font-family: "Kode Mono", monospace;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.more-link {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.more-link:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* 새로운 영역 */
+.youtube-section {
+    margin-top: 2rem;
+    position: relative;
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+}
+
+.youtube-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.youtube-fog {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.youtube-fog img {
+    width: 100%;
+    height: auto;
+}
+
+.youtube-player-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 50;
+    margin-top: 10%;
+}
+
+#youtube-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 사업 제안하기 영역 */
+.proposal-section {
+    position: relative;
+    min-width: 100%;
+    height: 600px;
+    overflow: hidden;
+    background-color: blue;
+}
+
+.proposal-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bg/bg_logo.png');
+    background-repeat: repeat;
+    background-color: blue;
+    transform: translateX(-100%);
+    transition: transform 2s ease;
+    z-index: 1;
+}
+
+.proposal-image {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    transform: translateX(-100%);
+    transition: transform 2s ease;
+    z-index: 2;
+}
+
+.proposal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.proposal-form {
+    position: absolute;
+    top: 0;
+    left: 700px;
+    min-width: calc(60% - 420px);
+    height: 100%;
+    padding: 20px;
+    background: transparent;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.5s ease 2s;
+}
+
+/* 폼 스타일 */
+.proposal-form h2 {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+}
+
+.proposal-form label {
+    font-family: "Kode Mono", monospace;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    display: block;
+    margin-top: 10px;
+}
+
+.proposal-form input, .proposal-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.proposal-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Silkscreen", sans-serif;
+    font-size: 20px;
+}
+
+.proposal-form button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    height: 100%;
+    position: relative;
+}
+
+.footer-content {
+    background-image: url('bg/bg_logo.png');
+    background-repeat: repeat;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    height: 200px;
+}
+
+/* 모달 기본 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    overflow: auto;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.modal-content {
+    background: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    position: relative;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* 폼 스타일 */
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form .form {
+    margin-bottom: 1rem;
+}
+
+.modal-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form label {
+    margin-top: 10px;
+}
+
+.modal-form input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-form button:hover {
+    background-color: #0056b3;
+}
+
+.modal-form p {
+    margin-top: 10px;
+}
+
+.modal-form a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.modal-form a:hover {
+    text-decoration: underline;
+}
