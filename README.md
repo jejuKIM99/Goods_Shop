@@ -146,4 +146,4 @@ document.addEventListener('DOMContentLoaded', function() {
 [readme-eng-shield]: https://img.shields.io/badge/-readme%20in%20english-2E2E2E?style=for-the-badge
 
 <!--URLS-->
-[readme-eng-url]: ../README_EN.md
+[readme-eng-url]: README_EN.md
