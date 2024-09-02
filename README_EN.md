@@ -23,15 +23,17 @@
 - [[5] Update Note](#5-update-note)
 
 # [1] About the Project
-- 해당 프로젝트는 ***'Idoly Pride'*** 게임의 굿즈 판매 사이트이며, 로그인/회원가입 부터 상점, 커뮤니티 등의 기능을 포함합니다.
-- 쇼핑몰 사이트의 구조 구현 연습 및 애니메이션 구현 연습에 중점을 둔 프로젝트 입니다.
-- 해당 프로젝트는 최종 버전 이전까지 지속적인 업데이트를 진행되어 **90일간** 배포 될 예정입니다.
-- 업데이트 내역은 본 문서 하단 **Update Note** 부분을 참고 하시길 바랍니다.
+- This project is a merchandise sales site for the ***'Idoly Pride'*** game, including features such as login/sign-up, shop, and community.
+- It is a project focused on practicing the implementation of the structure of a shopping mall site and animation effects.
+- This project will continue to receive updates until the final version is released and is scheduled to be deployed for **90 days**.
+- For update details, please refer to the **Update Note** section at the bottom of this document.
+
 
 ## Features
-- 다양한 **애니메이션**이 구현되어 있습니다.
-- **필터 검색** 기능을 포함하고 있으며, 다중 조건 검색이 가능합니다.
-- **시그니처 컬러**를 이용한 디자인을 통해 색상의 난잡함을 줄였습니다.
+- Various **animations** have been implemented.
+- Includes a **filter search** feature that allows multi-condition searching.
+- The use of **signature colors** in design helps to reduce color clutter.
+
 
 ## Technologies
 - [PHP]
@@ -41,22 +43,24 @@
 - [Visual Studio Code]
 
 # [2] Getting Started
-- 해당 프로젝트는 **PHP**로 개발되었습니다. 때문에 **XAMMP** 프로그램을 다운받아 사용하시길 바랍니다.
-- 정상적인 작동을 위해 **PHP My Admin**에 geet 데이터베이스를 만들어 폴더 내 **geet.sql**을 import하시길 바랍니다.
+- This project is developed using **PHP**. Therefore, it is recommended to download and use the **XAMPP** program.
+- For proper functionality, please create a `geet` database in **PHP MyAdmin** and import the **geet.sql** file located in the project folder.
 
 ## Prerequisites
-*XAMMP의 다운로드 방법은 아래와 같습니다.*
+*Instructions for downloading XAMPP are as follows:*
 
-- **XAMMP 다운로드**: https://www.apachefriends.org/
-- **XAMMP 다운로드 시 주의사항**: Apache, MariaDB(PHP MY Admin), PHP 세가지만 다운로드 받으면 됩니다.
+- **Download XAMPP**: https://www.apachefriends.org/
+- **Note for XAMPP download**: You only need to download Apache, MariaDB (PHP MyAdmin), and PHP.
+
 
 ## Installation
-*프로젝트의 소스코드는 Repository 클론을 사용하시거나 zip파일로 다운로드 받아 사용하시길 바랍니다.*
-1. Repository 클론
+*You can use the project's source code by either cloning the repository or downloading it as a zip file.*
+1. Clone the repository
 ```bash
 git clone https://github.com/your-username/project-repository (https://github.com/jejuKIM99/Goods_Shop.git)
+
 ```
-2. zip파일로 다운로드
+2. Download as a zip file
 ```bash
 https://github.com/jejuKIM99/Goods_Shop
 ```
@@ -65,10 +69,11 @@ https://github.com/jejuKIM99/Goods_Shop
 
 ![Caution](readme_img/caution.png)
 
-- *해당 프로젝트는 현재 개발중입니다. 이것을 감안하여 참고 바랍니다.*
-- **해당 프로젝트의 허용 범위 외 사용과 배포는 금지되어 있습니다. 사용 희망 시 본 문서 아래 이메일로 문의 바랍니다.**
-- **허용 범위**: *개인 학습 및 참고*
-- **금지**: ***개인 포트폴리오 사용, 영리목적 사용, 강의용 자료, 재가공 및 배포*** 등 허용 범위 외 사용
+- *This project is currently under development. Please keep this in mind.*
+- **Unauthorized use and distribution of this project beyond the permitted scope are prohibited. If you wish to use it, please contact the email provided at the bottom of this document.**
+- **Permitted Scope**: *Personal learning and reference*
+- **Prohibited**: ***Use in personal portfolios, commercial purposes, educational materials, reprocessing, and distribution***, or any use beyond the permitted scope.
+
 
 # [3] Usage
 
@@ -76,8 +81,9 @@ https://github.com/jejuKIM99/Goods_Shop
 
 ![usage](readme_img/Animation1.gif)
 
-- **Index Page**입니다. 해당 페이지는 페이지 초기 로드시 나타나며, 간단한 애니메이션을 포함하고 있습니다.
-- 배경 및 이미지는 **Idoly Pride**의 공식홈페이지에서 다운로드 하였습니다.
+- This is the **Index Page**. This page appears when the site initially loads and includes simple animations.
+- The background and images were downloaded from the official **Idoly Pride** website.
+
 
 ```javascript
 document.addEventListener('DOMContentLoaded', function() {
@@ -99,35 +105,39 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 ```
-- 애니메이션 코드는 위와 같습니다.
-- 해당 코드는 **script.js** 파일에서 확인 가능합니다.
+- The animation code is as shown above.
+- You can find this code in the **script.js** file.
+
 
 <h2>Main Page</h2>
 
 ![usage](readme_img/Animation2.gif)
 
-- **Main Page**입니다. **Index Page**에서 버튼을 눌러 진입하면 보시게 될 페이지 입니다.
-- 해당 페이지는 상단 메뉴바 **nav.php**를 포함하고 있으며, 각각의 구역으로 나누어 구성되어 있습니다.
-- 페이지 내용영역 상단 슬라이드 부분에 조금의 오류가 있습니다.
-- 페이지의 내용은 추후 업데이트를 통해 동적으로 구성될 예정입니다.
+- This is the **Main Page**. It is the page you will see after pressing the button on the **Index Page**.
+- This page includes the top menu bar **nav.php** and is structured into separate sections.
+- There is a minor issue with the top slider section in the content area of the page.
+- The content of the page is expected to be dynamically updated in future updates.
+
 
 <h2>Mypage</h2>
 
 ![usage](readme_img/Animation3.gif)
 
-- **MyPage**입니다. **nav**의 로그인 버튼을 눌러 로그인 성공 이후 진입 가능한 페이지 입니다.
-- 해당 페이지에서 프로필 사진 변경 및 비밀번호 변경이 가능합니다. *(비밀번호 변경 기능 미구현)*
-- 해당 계정의 구매목록을 볼 수 있으며, 간단한 필터 정렬기능을 포함합니다.
-- **진입방법**: ID: admin@naver.com, PW: 111111 로 구매 이력이 있는 계정으로 진입 가능합니다.
+- This is the **MyPage**. It is accessible after successfully logging in via the login button in **nav**.
+- On this page, you can change your profile picture and password. *(Password change functionality is not yet implemented)*
+- You can view the purchase history for the account and includes a simple filter and sorting feature.
+- **Access Method**: You can log in with an account that has purchase history using **ID: admin@naver.com** and **PW: 111111.**
+
 
 <h2>Shop Page & Community Page</h2>
 
 ![usage](readme_img/Animation4.gif)
 
-- **Shop Page와 Community Page**입니다. 해당 페이지는 로그인을 하지 않아도 진입 가능합니다.
-- **SideBar**를 통해 **Shop Page**내에서 검색 및 정렬이 가능합니다.
-- 검색 및 정렬은 다중 조건을 허용하며, 검색 결과 일치 항목이 없을 경우에 대한 처리도 되어 있습니다.
-- **Community Page**에는 검색기능이 있으며, 추후 글쓰기 및 필터 정렬 기능을 추가 할 예정입니다.
+- This is the **Shop Page** and **Community Page**. These pages are accessible without logging in.
+- On the **Shop Page**, you can search and sort items through the **SideBar**.
+- Search and sorting allow multiple conditions, and handling is provided for cases where no matching search results are found.
+- The **Community Page** includes a search function, and features for posting and filtering will be added in the future.
+
 
 # [4] Contact
 - 📧 s2005i@naver.com
@@ -143,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
 [issue-closed-shield]: https://img.shields.io/github/issues-closed/dev-ujin/readme-template?labelColor=D8D8D8&color=FE9A2E
 
 <!--Url for Buttons-->
-[readme-eng-shield]: https://img.shields.io/badge/-readme%20in%20english-2E2E2E?style=for-the-badge
+[readme-ko-shield]: https://img.shields.io/badge/-readme%20in%20korean-2E2E2E?style=for-the-badge
 
 <!--URLS-->
 [readme-ko-url]: README.md
