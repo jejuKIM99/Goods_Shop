@@ -20,6 +20,7 @@
   - [Caution](#caution)
 - [[3] Usage](#3-usage)
 - [[4] Contact](#4-contact)
+- [[5] Update Note](#5-update-note)
 
 # [1] About the Project
 - 해당 프로젝트는 ***'Idoly Pride'*** 게임의 굿즈 판매 사이트이며, 로그인/회원가입 부터 상점, 커뮤니티 등의 기능을 포함합니다.
@@ -132,6 +133,9 @@ document.addEventListener('DOMContentLoaded', function() {
 - 📧 s2005i@naver.com
 - 📋 [https://github.com/jejuKIM99/Goods_Shop]
 
+# [5] Update-Note
+
+- 2024-09-02 github upload and create README.md
 
 <!--Url for Badges-->
 [license-shield]: https://img.shields.io/github/license/dev-ujin/readme-template?labelColor=D8D8D8&color=04B4AE
@@ -142,4 +146,4 @@ document.addEventListener('DOMContentLoaded', function() {
 [readme-eng-shield]: https://img.shields.io/badge/-readme%20in%20english-2E2E2E?style=for-the-badge
 
 <!--URLS-->
-[readme-eng-url]: ../README.md
+[readme-eng-url]: ../README_EN.md
